@@ -14,6 +14,10 @@ export async function loader() {
   }
 }
 
+// export default function ProjectIndexRoute() {
+//   return null;
+// }
+
 const projectIds = [1, 2, 3, 4, 5];
 
 async function getNewestProjectId() {
@@ -23,10 +27,10 @@ async function getNewestProjectId() {
 }
 
 export function ErrorBoundary() {
-  return <h1>on no Error on "app/routes/project/index.tsx"</h1>;
+  return <h1>ErrorBoundary ("app/routes/project/index.tsx")</h1>;
 }
 
 export function CatchBoundary() {
   // const caught = useCatch()
-  return <h1>oh no Catch</h1>;
+  return <h1>CatchBoundary</h1>;
 }
