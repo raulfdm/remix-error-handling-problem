@@ -6,7 +6,10 @@ export async function loader() {
 
     return redirect(`/project/${latestProjectId}`);
   } catch (error) {
-    console.log('Something went wrong :(');
+    if (error instanceof Error) {
+      console.log(error.message);
+    }
+
     throw error;
   }
 }
